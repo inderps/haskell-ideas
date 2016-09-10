@@ -88,6 +88,34 @@ f x y = 2*x + y
 ## Type Classes
 
 ```haskell
+
+class Eq a where  
+    (==) :: a -> a -> Bool  
+    (/=) :: a -> a -> Bool  
+    x == y = not (x /= y)  
+    x /= y = not (x == y)  
+    
+class YesNo a where  
+    yesno :: a -> Bool  
+    
+instance YesNo Int where  
+    yesno 0 = False  
+    yesno _ = True  
+    
+instance YesNo [a] where  
+    yesno [] = False  
+    yesno _ = True  
+    
+yesno "haha" -- True
+yesno [] -- False
+
+yesnoIf :: (YesNo y) => y -> a -> a -> a  
+yesnoIf yesnoVal yesResult noResult = if yesno yesnoVal then yesResult else noResult 
+
+yesnoIf [] "YEAH!" "NO!"  -- "NO!"
+
+yesnoIf [2,3,4] "YEAH!" "NO!"  -- "YEAH!"
+
 ```
 
 

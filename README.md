@@ -52,6 +52,26 @@ data Person = Person String Int Thing
 
 ```
 
+
+## Pattern-matching
+
+```haskell
+
+intListLength :: [Integer] -> Integer
+intListLength []     = 0
+intListLength (x:xs) = 1 + intListLength xs
+
+isSmall :: Thing -> Bool
+isSmall Ship = False
+isSmall King = False
+isSmall _    = True
+
+baz :: Person -> String
+baz p@(Person n _ _) = "The name field of (" ++ show p ++ ") is " ++ n
+
+```
+
+
 ### Credits
 
 All the examples here are taken from [Brent Yorgey](https://byorgey.wordpress.com/)'s [course](http://www.seas.upenn.edu/~cis194/spring13/lectures.html)

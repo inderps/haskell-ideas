@@ -30,3 +30,28 @@ isEven n
   | otherwise      = False
 
 ```
+
+
+## Enumeration types
+
+```haskell
+
+data Thing = Shoe 
+           | Ship 
+           | SealingWax 
+           | Cabbage 
+
+data FailableDouble = Failure
+                    | OK Double
+                    
+ex01 = Failure
+ex02 = OK 3.4
+
+data Person = Person String Int Thing
+        
+
+```
+
+### Credits
+
+All the examples here are taken from [Brent Yorgey](https://byorgey.wordpress.com/)'s [course](http://www.seas.upenn.edu/~cis194/spring13/lectures.html)

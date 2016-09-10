@@ -2,7 +2,7 @@
 Basic ideas which can be taken from Haskell to implement in other languages
 
 
-## Type Signatures
+## Type Signatures (Hindley-Milner)
 
 ```haskell
 
@@ -85,6 +85,40 @@ f x y = 2*x + y
 ```
 
 
+## Type Classes
+
+```haskell
+```
+
+
+## Folds
+
+```haskell
+```
+
+
+## Monoids
+
+```haskell
+```
+
+
+## Functors
+
+```haskell
+```
+
+
+## Applicative Functors
+
+```haskell
+```
+
+
+## Monads
+
+```haskell
+```
 
 
 ## Others

@@ -13,3 +13,20 @@ f :: Int -> Int -> Int -> Int
 f x y z = x + y + z
 
 ```
+
+
+## Guards
+
+```haskell
+
+hailstone :: Integer -> Integer
+hailstone n
+  | n `mod` 2 == 0 = n `div` 2
+  | otherwise      = 3*n + 1
+
+isEven :: Integer -> Bool
+isEven n 
+  | n `mod` 2 == 0 = True
+  | otherwise      = False
+
+```

@@ -72,6 +72,22 @@ baz p@(Person n _ _) = "The name field of (" ++ show p ++ ") is " ++ n
 ```
 
 
+## Others
+
+```haskell
+
+-- Case expressions
+ex03 = case "Hello" of
+           []      -> 3
+           ('H':s) -> length s
+           _       -> 7
+
+-- Polymorphism
+data Maybe a = Nothing | Just a
+
+
+```
+
 ### Credits
 
 All the examples here are taken from [Brent Yorgey](https://byorgey.wordpress.com/)'s [course](http://www.seas.upenn.edu/~cis194/spring13/lectures.html)

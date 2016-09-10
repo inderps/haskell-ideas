@@ -82,8 +82,17 @@ ex03 = case "Hello" of
            ('H':s) -> length s
            _       -> 7
 
+
 -- Polymorphism
 data Maybe a = Nothing | Just a
+
+
+-- Anonymous functions
+greaterThan100_2 :: [Integer] -> [Integer]
+greaterThan100_2 xs = filter (\x -> x > 100) xs
+
+greaterThan100_3 :: [Integer] -> [Integer]
+greaterThan100_3 xs = filter (>100) xs
 
 
 ```

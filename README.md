@@ -72,6 +72,21 @@ baz p@(Person n _ _) = "The name field of (" ++ show p ++ ") is " ++ n
 ```
 
 
+## Function composition & Currying
+
+```haskell
+
+myTest' :: [Integer] -> Bool
+myTest' = even . length . greaterThan100
+
+f :: Int -> Int -> Int
+f x y = 2*x + y
+
+```
+
+
+
+
 ## Others
 
 ```haskell
